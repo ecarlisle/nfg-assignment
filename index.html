@@ -7,31 +7,212 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
   
   </head>
   <body>
 
+    <!-- Uncomment to view trace-image of section above fundraiser listing -->
+    <!--
     <div class="container">
       <div class="row">
-
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-        <div class="col-xs-4 col-md-2">Name</div>
-
+        <div>
+        <img class="img-responsive" src="img/traceimages/traceimage-top.jpg"/>
+        </div>
       </div>
     </div>
+    -->
+
+    <article class="container" id="fundraisers-list">
+
+      <section class="row">
+        <header>
+          <span>People have already started fundraising</span><a href="#" id="start-your-campaign" class="btn btn-primary">Start Your Campaign!</a>
+        </header>
+      </section>
+
+      <section class="row" id="fundraisers-primary">
+  
+        <!-- 
+          From the requirements document: 
+
+            "Each row of 6 users should “break down” to a row of 3 users at the 
+             mobile breakpoint. If 3 users at the mobile screen size isn’t viable 
+             or desirable, deliver an alternative solution and justify why your 
+             alternative may be a better solution through an HTML comment in your 
+             markup."
+
+          Making rows of 3 fundraisers on the lowest mobile size presents issue 
+          with both form and function:
+
+          FORM: The content, 3 images with full name labels, may become crowded.
+          With the grid several even divisions of 12 columns are possible. Each 
+          breakpoint may be given a division for which content best fits in form.
+
+          FUNCTION: Bootstrap columns do not have equal height.  Therefore, 
+          closely crowded content may cause unexpected float breaks. There are 
+          several CSS hacks that can be used as workarounds, but none ideal. 
+          Additionally, the flexbox display mode could be used to give columns 
+          equal height. That solution is very graceful but has cross-browser 
+          compliance risks.
+
+          My solution was to give each figure the following combination of 
+          resets:
+
+             col-xs-6 
+             col-sm-4 
+             col-md-3 
+             col-lg-2
+          
+          This appropriates content space for each breakpoint that I believe 
+          best compliments the form. This also places two fundraisers per row 
+          on the smallest display widths, lessening the risk of float breaks.
+
+        -->
+        
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/1.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Julia Wood</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/2.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Sean Crawford</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/3.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Pamela Nguyen</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/4.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Emily Martinez</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/5.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Randy Silva</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/6.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Daniel Taylor</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/7.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Kajsa Hallgren</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/8.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Jason Patel</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/9.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Ann Chen</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/10.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Johnny Delgado</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/11.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Vincent Ward</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/person-icon.png" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Your Face Here!</figcaption>
+        </figure>
+
+      </section>
+
+      <div class="row collapse in" id="fundraisers-reveal">
+        <div>
+          <div class="pull-right"><a href="#">See all fundraiders</a></div>
+        </div>
+      </div>
+
+      <section class="row collapse" id="fundraisers-secondary">
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/12.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Sofia Farina</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/13.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Zachary Fisher</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/14.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Andrea Ross</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/15.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Gary Campbell</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/16.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Julie Deprez</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/17.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Mark Hall</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/18.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Linda Dunn</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/19.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Mark Lane</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/20.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Gerald Reed</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/21.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Dorothy Schmidt</figcaption>
+        </figure>
+
+        <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 person">
+          <img src="img/faces/22.jpg" class="img-circle img-responsive headshot" alt="" />
+          <figcaption>Phillip Ross</figcaption>
+        </figure>
+
+      </section>
+    </article>
+
+    <!-- Uncomment to view trace-image of section below fundraiser listing -->
+    <!--
+    <div class="container">
+      <div class="row">
+        <div>
+        <img class="img-responsive" src="img/traceimages/traceimage-bottom.jpg"/>
+        </div>
+      </div>
+    </div>
+    -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
