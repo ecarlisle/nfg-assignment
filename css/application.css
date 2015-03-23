@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular-webfont.eot");
+  src: url("../fonts/Lato-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular-webfont.woff2") format("woff2"), url("../fonts/Lato-Regular-webfont.woff") format("woff"), url("../fonts/Lato-Regular-webfont.ttf") format("truetype"), url("../fonts/Lato-Regular-webfont.svg#Lato") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+	src: url("../fonts/Lato-Bold-webfont.eot");
+	src: url("../fonts/Lato-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold-webfont.woff2") format("woff2"), url("../fonts/Lato-Bold-webfont.woff") format("woff"), url("../fonts/Lato-Bold-webfont.ttf") format("truetype"), url("../fonts/Lato-Bold-webfont.svg#Lato") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato Light";
+	src: url("../fonts/Lato-Light-webfont.eot");
+	src: url("../fonts/Lato-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light-webfont.woff2") format("woff2"), url("../fonts/Lato-Light-webfont.woff") format("woff"), url("../fonts/Lato-Light-webfont.ttf") format("truetype"), url("../fonts/Lato-Light-webfont.svg#Lato Light") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+a,
+a:active,
+a:hover {
+  color: #47c7a4;
+  text-decoration: underline;
+}
+
+.headshot {
+  border: solid 3px #47c7a4;
+}
+
+#fundraisers-list {
+  color: #8c8c8c;
+  font: 14px 'Lato', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#fundraisers-list header {
+  color: #8c8c8c;
+  font: 20px 'Lato Light', sans-serif;
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+#fundraisers-list header span {
+  display: block;
+}
+
+#fundraisers-list figure {
+  padding: 0 10px;
+  text-align: center;
+}
+
+#fundraisers-list figure img {
+  margin: 0 auto;
+}
+
+#fundraisers-list figcaption {
+  font-weight: bold;
+  margin: 10px 0 25px 0;
+  text-transform: uppercase;
+}
+
+#fundraisers-reveal {
+  font-size: 18px;
+  padding: 0 20px 0 0;
+}
+
+.btn-primary {
+  background: #47c7a4;
+  border-width: 0;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background: #47c7a4;
+}
+
+@media screen and (min-width: 768px) {
+
+  #fundraisers-list header {
+    font-size: 27px;
+  }
+
+  #fundraisers-list header span {
+    display: inline-block;
+  }
+
+  .btn-primary {
+    font-size: 18px;
+    margin: 0 0 0 15px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  #fundraisers-list header {
+    font-size: 34px;
+  }
+
+  #fundraisers-reveal {
+    font-size: 24px;
+    padding: 0;
+  }
+}
+

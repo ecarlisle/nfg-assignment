@@ -1,0 +1,19 @@
+// Font face for web fonts.
+.font-face(@name, @file, @weight:normal, @style:normal) {
+  font-family: "@{name}";
+  src: url("@{file}.eot");
+  src: url("@{file}.eot?#iefix") format("embedded-opentype"),
+       url("@{file}.woff2") format("woff2"),
+       url("@{file}.woff") format("woff"),
+       url("@{file}.ttf") format("truetype"),
+       url("@{file}.svg#@{name}") format("svg");
+  font-weight: @weight;
+  font-style: @style;
+}
+
+// Media queries.
+.mq(@width; @rules) {
+  @media screen and (min-width: @width) {
+    @rules();
+  }
+}

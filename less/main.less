@@ -1,0 +1,110 @@
+@font-face {
+	.font-face(Lato, '../fonts/Lato-Regular-webfont', normal, normal);
+}
+
+@font-face {
+	.font-face(Lato, '../fonts/Lato-Bold-webfont', bold, normal);
+}
+
+@font-face {
+	.font-face('Lato Light', '../fonts/Lato-Light-webfont', normal, normal);
+}
+
+a, a:active, a:hover {
+	color: @aqua;
+	text-decoration: underline;
+}
+
+.headshot {
+	border: solid 3px @aqua;
+}
+
+#fundraisers-list {
+	
+	color: @gray-dark;
+	font: 14px @lato-stack;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	header {
+		color: @gray-dark;
+		font: 20px @lato-light-stack;
+		margin: 0 0 25px;
+		text-align: center;
+	
+		.mq (@sm;{
+			font-size: 27px;
+		});
+
+		.mq (@md;{
+			font-size: 34px;
+		});
+
+		span {
+			display: block;
+			.mq (@sm;{
+				display: inline-block;
+			});
+				
+		}
+
+ 	}
+
+	figure {
+		padding: 0 10px;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
+
+	}
+
+	figcaption {
+		font-weight: bold;
+		margin: 10px 0 25px 0;
+		text-transform: uppercase;
+	}
+}
+
+#fundraisers-primary {
+
+}
+
+#fundraisers-secondary {
+	
+}
+
+#fundraisers-reveal {
+	font-size: 18px;
+	padding: 0 20px 0 0;
+
+	.mq (@md;{
+		font-size: 24px;
+		padding: 0;
+	});
+}
+
+//---------- Bootstrap overrides ----------
+.btn-primary {
+	background: @aqua;
+	border-width: 0;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-top: 10px;
+  padding: 10px 20px;
+	text-decoration: none;
+
+	&:hover, 
+	&:active, 
+	&:focus {
+		background: @aqua;
+	}
+
+	.mq (@sm;{
+	  font-size: 18px;
+		margin: 0 0 0 15px;
+		width: auto;
+	})
+
+}
