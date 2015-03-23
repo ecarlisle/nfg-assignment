@@ -5,12 +5,11 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          compress: true,
-          yuicompress: true,
+          expand: true,
           optimization: 2
         },
         files: {
-          "css/main.css": "less/main.less" // destination file and source file
+          "css/application.css": "less/application.less"
         }
       }
     },
@@ -22,8 +21,26 @@ module.exports = function(grunt) {
           nospawn: true
         }
       }
+    },
+    cmq: {
+      options: {
+        log: false
+      },
+      your_target: {
+        files: {
+          'css': ['css/application.css']
+        }
+      }
+    },
+    cssbeautifier : {
+      files : "css/application.css",
+      options : {
+        indent: '  ',
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.registerTask('default', ['less', 'watch']);
 };
