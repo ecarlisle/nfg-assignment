@@ -28,7 +28,7 @@ a, a:active, a:hover {
 
 	header {
 		color: @gray-dark;
-		font: 20px @lato-light-stack;
+		font: 30px @lato-light-stack;
 		margin: 0 0 25px;
 		text-align: center;
 	
@@ -45,9 +45,7 @@ a, a:active, a:hover {
 			.mq (@sm;{
 				display: inline-block;
 			});
-				
 		}
-
  	}
 
 	figure {
@@ -57,7 +55,6 @@ a, a:active, a:hover {
 		img {
 			margin: 0 auto;
 		}
-
 	}
 
 	figcaption {
@@ -106,5 +103,12 @@ a, a:active, a:hover {
 		margin: 0 0 0 15px;
 		width: auto;
 	})
+}
 
+// --- Override for thumbnail conponent.
+.thumbnail {
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
